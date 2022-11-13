@@ -1,0 +1,212 @@
+//////////////////////////////
+/// CONTAINER
+
+.container {
+    width: 80%;
+    height: 80vh;
+    background-color: #fff;
+    margin: 8rem auto;
+}
+
+
+//////////////////////////////
+/// HEADER
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 8rem;
+
+    &__icon {
+        height: 3.25rem;
+        margin: 2rem;
+    }
+}
+
+//////////////////////////////
+/// SEARCH
+
+.search {
+    width: 50%;
+    background-color: var(--color-grey-light-3);
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem;
+
+    &__input {
+        width: 90%;
+        background-color: var(--color-grey-light-3);
+        border: none;
+        padding: .5rem 1rem;
+        border-radius: 100px;
+        font-size: inherit;
+        transition: all .2s;
+
+        &:focus {
+            outline: none;
+            width: 95%;
+        }
+    }
+
+    &__button {
+        border: none;
+    }
+
+    &__icon {
+        height: 2rem;
+        width: 2rem;
+    }
+}
+
+//////////////////////////////
+/// USER-NAV
+
+.user-nav {
+    align-self: stretch;
+    
+    display: flex;
+
+    & > * {
+        padding: 0 2rem;
+        cursor: pointer;
+        height: 100%;
+    }
+
+    & > *:hover {
+        background-color: var(--color-grey-light-4);
+    }
+
+    &__icon-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    &__icon {
+        height: 2.25rem;
+        width: 2.25rem;
+    }
+
+    &__notification {
+        background-color: var(--color-primary-light);
+        border-radius: 100px;
+        width: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 1.5rem;
+        right: 1rem;
+        color: #fff;
+    }
+
+    &__user {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__user-img {
+        height: 3.25rem;
+        border-radius: 50%;
+        margin-right: 1rem;
+    }
+
+    &__user-name {
+
+    }
+}
+
+//////////////////////////////
+/// CONTENT
+
+.content {
+    display: flex;
+}
+
+//////////////////////////////
+/// NAVIGATION
+
+.navigation {
+    flex: 0 0 18%;
+    background-color: var(--color-grey-dark-1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__list {
+        list-style: none;
+        margin-top: 2rem;
+    }
+
+    &__item {
+        padding: 1.5rem 2rem;
+        margin-top: 1rem;
+        position: relative;
+    }
+
+    &__item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 3px;
+        background-color: var(--color-primary-light);
+        transform: scaleY(0);
+        transition: transform .2s,
+                    width .4s .2s,
+                    background-color .1s;
+    }
+
+    &__item:hover::before,
+    &__item--active::before {
+        transform: scaleY(1);
+        width: 100%;
+    }
+
+    &__item:active::before {
+        background-color: var(--color-primary-dark);
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            color: #fff;
+            text-transform: uppercase;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+        }
+    }
+
+    &__icon {
+        fill: currentColor;
+        height: 2rem;
+        width: 2rem;
+        margin-right: 1rem;
+    }
+}
+
+.copyright-box {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.copyright {
+    color: #fff;
+}
+
+//////////////////////////////
+/// HOTEL-MAIN
+
+.hotel-main {
+    flex: 1;
+    background-color: var(--color-grey-light-4);
+    height: 80rem;
+}
