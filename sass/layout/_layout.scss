@@ -207,6 +207,64 @@
 
 .hotel-main {
     flex: 1;
-    background-color: var(--color-grey-light-4);
+    background-color: #fff;
     height: 80rem;
+}
+
+//////////////////////////////
+/// OVERVIEW
+
+.overview {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__heading {
+        font-size: 2rem;
+        padding: 1.5rem 3rem;
+        color: #000;
+        text-transform: uppercase;
+        font-weight: 300;
+    }
+
+    &__star {
+        margin-right: auto;
+    }
+
+    &__icon {
+        width: 2rem;
+        height: 2rem;
+        fill: var(--color-primary-dark);
+    }
+
+    &__location {
+        padding: 1rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+    }
+
+    &__rating {
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--color-primary-light);
+        padding: 1rem 2rem;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+
+        &--average {
+            font-size: 2.25rem;
+            font-weight: 300;
+        }
+
+        &--count {
+            font-size: .8rem;
+            
+        }
+    }
+
 }
