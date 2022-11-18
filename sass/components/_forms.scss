@@ -1,0 +1,36 @@
+//////////////////////////////
+/// SEARCH
+
+.search {
+    width: 50%;
+    background-color: var(--color-grey-light-3);
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem;
+
+    &__input {
+        width: 90%;
+        background-color: var(--color-grey-light-3);
+        border: none;
+        padding: .5rem 1rem;
+        border-radius: 100px;
+        font-size: inherit;
+        transition: all .2s;
+
+        &:focus {
+            outline: none;
+            width: 95%;
+        }
+    }
+
+    &__button {
+        border: none;
+    }
+
+    &__icon {
+        height: 2rem;
+        width: 2rem;
+    }
+}
