@@ -48,6 +48,9 @@
     font-weight: 300;
 }
 
+//////////////////////////////
+/// DESCRIPTION
+
 .description {
     flex: 0 0 60%;
     background-color: #fff;
@@ -112,6 +115,9 @@
         }
     }
 }
+
+//////////////////////////////
+/// USER-REVIEW
 
 .user-reviews {
     margin-left: 4rem;
@@ -184,3 +190,72 @@
     }
 
 }
+
+//////////////////////////////
+/// CTA
+
+.cta {
+
+    background-color: var(--color-grey-light-1);
+    text-align: center;
+    padding: 4rem 0;
+    text-transform: uppercase;
+
+    &__heading {
+        margin-bottom: 2rem;
+        font-weight: 300;
+        font-size: 2.5rem;
+    }
+
+    &__button {
+        text-transform: inherit;
+        background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+        color: #fff;
+        border-radius: 100px;
+        font-weight: 300;
+        position: relative;
+        overflow: hidden;
+        border: none;
+        cursor: pointer;
+        font-size: 1.5rem;
+
+        & > * {
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            transition: all .2s;
+        }
+
+        &--book {
+            padding: 2.5rem 7.5rem;
+            transition: all .2s;
+        }
+
+        &--only {
+            position: absolute;
+            top: -100%;
+            left: 0;
+            padding: 2.5rem 0;
+        }
+
+        &:hover {
+            background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark));
+        }
+
+        &:focus {
+            outline: none;
+            animation: btn-pulsate 1s infinite;
+        }
+
+    }
+
+    &__button:hover &__button--book {
+        transform: translateY(100%);
+    }
+
+    &__button:hover &__button--only {
+        top: 0;
+    }
+
+}
+
