@@ -5,6 +5,11 @@
     width: 90%;
     background-color: #fff;
     margin: 8rem auto;
+
+    @include respond(tab-land) {
+        width: 100%;
+        margin: 0;
+    }
 }
 
 
@@ -15,6 +20,12 @@
     display: flex;
     justify-content: space-between;
     height: 8rem;
+
+    @include respond(phone) {
+        flex-wrap: wrap;
+        height: 12rem;
+        align-items: flex-start;
+    }
 
     &__icon {
         height: 3.25rem;
@@ -27,6 +38,10 @@
 
 .content {
     display: flex;
+
+    @include respond(phone) {
+        flex-direction: column;
+    }
 }
 
 //////////////////////////////
@@ -46,6 +61,11 @@
     font-size: 1.4rem;
     line-height: 1.6;
     font-weight: 300;
+
+    @include respond(tab-port-small) {
+        flex-direction: column;
+        align-items: stretch;
+    }
 }
 
 //////////////////////////////
@@ -66,6 +86,10 @@
         flex-wrap: wrap;
         margin-top: 4rem;
         padding: 0 2rem;
+
+        @include respond(tab-land) {
+            padding: 0;
+        }
     }
 
     &__item {
@@ -88,9 +112,6 @@
         background-color: var(--color-primary-light);
         -webkit-mask-image: url(../img/chevron-thin-right.svg);
         -webkit-mask-size: cover;
-
-
-
     }
 
     &__recommend {
@@ -126,6 +147,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include respond(tab-port-small) {
+        margin-top: 2rem;
+        margin-left: 0;
+    }
 }
 
 .review {
@@ -205,6 +231,10 @@
         margin-bottom: 2rem;
         font-weight: 300;
         font-size: 2.5rem;
+
+        @include respond(tab-port-small) {
+            font-size: 2rem;
+        }
     }
 
     &__button {

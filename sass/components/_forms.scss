@@ -10,6 +10,12 @@
     justify-content: center;
     margin: 2rem;
 
+    @include respond(phone) {
+        order: 2;
+        width: 100%;
+        margin: 0;
+    }
+
     &__input {
         width: 90%;
         background-color: var(--color-grey-light-3);
